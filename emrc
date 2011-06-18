@@ -1,15 +1,10 @@
-bind-to-key	newline-and-indent	^J
 set		$fillcol		72
-set		$scroll			FALSE
-set		$overlap		2
 
 36	store-macro
 	!if &gre &sin $cfname ".pl" 0
-		add-mode "cmode"
 		4 handle-tab
 	!endif
 	!if &gre &sin $cfname ".rb" 0
-		add-mode "cmode"
 		2 handle-tab
 	!endif
 	!if &gre &sin $cfname ".sh" 0
@@ -19,11 +14,9 @@ set		$overlap		2
 		4 handle-tab
 	!endif
 	!if &gre &sin $cfname ".perl" 0
-		add-mode "cmode"
 		4 handle-tab
 	!endif
 	!if &gre &sin $cfname ".cgi" 0
-		add-mode "cmode"
 		4 handle-tab
 	!endif
 	!if &gre &sin $cfname "pico." 0
@@ -34,7 +27,6 @@ set		$overlap		2
 		!return
 	!endif
 	!if &gre &sin $cfname ".php" 0
-		add-mode "cmode"
 	!endif
 	!if &gre &sin $cfname "COMMIT_EDITMSG" 0
 		add-mode "wrap"
